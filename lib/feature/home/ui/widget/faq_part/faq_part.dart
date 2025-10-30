@@ -1,0 +1,61 @@
+import 'package:craftechy_website/core/theme/color.dart';
+import 'package:craftechy_website/feature/home/data/q_a.dart';
+import 'package:craftechy_website/feature/home/ui/widget/faq_part/faq_item_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class FAQPart extends StatelessWidget {
+  const FAQPart({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width - 160.w,
+          height: 280.h,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/faq.png'),
+              fit: BoxFit.cover,
+            ),
+            border: Border.all(
+              width: 1,
+              strokeAlign: BorderSide.strokeAlignOutside,
+              color: AppColor.grayColor15,
+            ),
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width - 160.w,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 1,
+              strokeAlign: BorderSide.strokeAlignOutside,
+              color: AppColor.grayColor15,
+            ),
+          ),
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              double itemWidth = (constraints.maxWidth) / 2;
+              return Wrap(
+                children: List.generate(listOFFAQ.length, (index) {
+                  return SizedBox(
+                    width: itemWidth,
+                    child: FAQItem(
+                      index: index,
+                      question: listOFFAQ[index]['question']!,
+                      answer: listOFFAQ[index]['answer']!,
+                    ),
+                  );
+                }),
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
