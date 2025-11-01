@@ -1,3 +1,4 @@
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:craftechy_website/core/routing/app_router.dart';
@@ -9,7 +10,7 @@ class Craftechy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(1440, 950),
+      designSize: ResponsiveWidget.isLargeScreen(context) ? const Size(1920, 1000) : ResponsiveWidget.isMediumScreen(context) ? const Size(1440, 950) : const Size(390, 950),
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp.router(
