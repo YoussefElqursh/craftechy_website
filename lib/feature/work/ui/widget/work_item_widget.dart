@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/feature/work/data/data.dart';
@@ -50,15 +51,20 @@ class WorkItem extends StatelessWidget {
               spacing: 30,
               children: [
                 Container(
+                  width: double.infinity,
                   height: 223.h,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(listOFWork[index]['image']!),
-                      fit: BoxFit.cover,
-                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
+                  ),
+                  child: CachedNetworkImage(
+                    imageUrl: listOFWork[index]['image']!,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) => const Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
                 ),
                 Row(
