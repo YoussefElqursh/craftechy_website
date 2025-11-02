@@ -351,8 +351,14 @@ class _FooterWidgetState extends State<FooterWidget> {
         children: [
           Wrap(
             alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            runAlignment: WrapAlignment.center,
+            direction: Axis.horizontal,
+            spacing: 24.w,
+            runSpacing: 24.h,
             children: [
               Row(
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -365,10 +371,9 @@ class _FooterWidgetState extends State<FooterWidget> {
                   SvgPicture.asset('assets/icons/SquareUp.svg'),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                spacing: 24.w,
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 24.0.w,
                 children: [
                   FooterBarBtnWidget(
                     title: 'Home',
