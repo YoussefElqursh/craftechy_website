@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/common_btn_widget.dart';
@@ -46,7 +47,7 @@ class ServicesScreen extends StatelessWidget {
             listOfServices3: qtListOfServices,
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 160.w,
+            width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
             height: 510.h,
             decoration: BoxDecoration(
               image: DecorationImage(

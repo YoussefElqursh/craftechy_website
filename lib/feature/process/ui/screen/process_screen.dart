@@ -1,3 +1,4 @@
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/feature/home/ui/widget/get_in_touch_part.dart';
 import 'package:craftechy_website/feature/process/data/data.dart';
@@ -26,7 +27,7 @@ class ProcessScreen extends StatelessWidget {
             subtitle: 'Here\'s an overview of our typical process:',
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 160.w,
+            width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               border: Border.all(
                 width: 1,
@@ -36,7 +37,7 @@ class ProcessScreen extends StatelessWidget {
             ),
             child: LayoutBuilder(
               builder: (context, constraints) {
-                double itemWidth = (constraints.maxWidth) / 2;
+                double itemWidth = ResponsiveWidget.isSmallScreen(context)? (constraints.maxWidth) : (constraints.maxWidth) / 2;
                 return Wrap(
                   children: List.generate(processList.length, (index) {
                     return SizedBox(

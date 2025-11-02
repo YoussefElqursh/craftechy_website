@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/feature/services/ui/widget/service_specis_item.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,11 @@ class ServiceSpecis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width - 160.w,
+      width: ResponsiveWidget.isLargeScreen(context)
+          ? MediaQuery.of(context).size.width - 342.w
+          : ResponsiveWidget.isMediumScreen(context)
+          ? MediaQuery.of(context).size.width - 160.w
+          : MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         border: Border.all(
           width: 1,
@@ -27,7 +32,7 @@ class ServiceSpecis extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(40.0),
             child: SizedBox(
-              width: 1240.w,
+              width: ResponsiveWidget.isSmallScreen(context) ? 358.w : 1240.w,
               child: Text(
                 listOfServices[0]['title']!,
                 style: TextStyle(
@@ -38,17 +43,29 @@ class ServiceSpecis extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(
-              listOfServices.length,
-                  (index) => ServiceSpecisItem(
-                image: listOfServices[index]['image']!,
-                description: listOfServices[index]['description']!,
-              ),
-            ),
-          ),
+          ResponsiveWidget.isSmallScreen(context)
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: List.generate(
+                    listOfServices.length,
+                    (index) => ServiceSpecisItem(
+                      image: listOfServices[index]['image']!,
+                      description: listOfServices[index]['description']!,
+                    ),
+                  ),
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: List.generate(
+                    listOfServices.length,
+                    (index) => ServiceSpecisItem(
+                      image: listOfServices[index]['image']!,
+                      description: listOfServices[index]['description']!,
+                    ),
+                  ),
+                ),
         ],
       ),
     );

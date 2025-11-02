@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +20,10 @@ class ServiceHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width - 160.w,
+      width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(
-        vertical: 80.w,
-        horizontal: 40.w,
+        vertical: ResponsiveWidget.isSmallScreen(context)? 40.h : 80.h,
+        horizontal: ResponsiveWidget.isSmallScreen(context)? 16.w : 40.w,
       ).copyWith(bottom: 40.w),
       decoration: BoxDecoration(
         border: Border.all(
@@ -36,7 +37,7 @@ class ServiceHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
-            width: 950.sp,
+            width: ResponsiveWidget.isSmallScreen(context)? 326.w : 950.w,
             child: Text(
               title,
               style: TextStyle(
@@ -48,7 +49,7 @@ class ServiceHeader extends StatelessWidget {
           ),
           verticalSpace(10),
           SizedBox(
-            width: 950.sp,
+            width: ResponsiveWidget.isSmallScreen(context)? 326.w : 950.w,
             child: Text(
               description,
               style: TextStyle(

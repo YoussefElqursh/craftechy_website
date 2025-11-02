@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/common_btn_widget.dart';
@@ -24,7 +25,7 @@ class WorkScreen extends StatelessWidget {
           HeaderSection(),
           WorkPart(),
           Container(
-            width: MediaQuery.of(context).size.width - 160.w,
+            width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
             height: 625.h,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -49,7 +50,7 @@ class WorkScreen extends StatelessWidget {
                 ),
                 verticalSpace(40),
                 SizedBox(
-                  width: 780,
+                  width: 780.w,
                   child: Text(
                     'Let us Bring your Ideas to Life in the Digital World.',
                     textAlign: TextAlign.center,
@@ -62,7 +63,7 @@ class WorkScreen extends StatelessWidget {
                 ),
                 verticalSpace(10),
                 SizedBox(
-                  width: 780,
+                  width: 780.w,
                   child: Text(
                     'No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product.',
                     textAlign: TextAlign.center,

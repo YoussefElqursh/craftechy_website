@@ -1,48 +1,13 @@
-import 'package:craftechy_website/core/constant/font_wight_helper.dart';
-import 'package:craftechy_website/core/theme/color.dart';
+import 'package:craftechy_website/core/widget/footer_bar_btn_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
-class NavigationBarBtnWidget extends StatelessWidget {
-  final void Function()? onPressed;
-  final String title;
-  final bool isSelected;
-
-  const NavigationBarBtnWidget({
-    super.key,
-    this.onPressed,
-    required this.title,
-    required this.isSelected,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: ButtonStyle(
-        shape: WidgetStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(6.r),
-          ),
-        ),
-        backgroundColor: isSelected
-            ? WidgetStatePropertyAll(AppColor.grayColor15)
-            : WidgetStatePropertyAll(Colors.transparent),
-        overlayColor: isSelected
-            ? WidgetStatePropertyAll(AppColor.grayColor15)
-            : WidgetStatePropertyAll(Colors.transparent),
-      ),
-      child: Text(
-        title,
-        style: TextStyle(
-          color: isSelected ? AppColor.whiteColor : AppColor.grayColor90,
-          fontSize: 14.sp,
-          fontWeight: isSelected
-              ? FontWeightHelper.semiBold
-              : FontWeightHelper.medium,
-          height: 1.50,
-        ),
-      ),
-    );
-  }
+Widget buildNavButton(BuildContext context, String title, String route, String currentRoute) {
+  return FooterBarBtnWidget(
+    title: title,
+    isSelected: currentRoute == route,
+    onPressed: () {
+      if (currentRoute != route) context.go(route);
+    },
+  );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart'as svg;
 
 class IconContainerWidget extends StatelessWidget {
@@ -9,8 +10,8 @@ class IconContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
-      height: 70,
+      width: 70.w,
+      height: 70.h,
       padding: const EdgeInsets.all(20),
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
@@ -28,7 +29,7 @@ class IconContainerWidget extends StatelessWidget {
             width: 1,
             color: const Color(0xFF2E2E2E),
           ),
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
       ),
     );

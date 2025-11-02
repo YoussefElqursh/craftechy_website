@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class ProcessHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width - 160.w,
+      width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(
         vertical: 80.w,
         horizontal: 40.w,
@@ -36,7 +37,7 @@ class ProcessHeaderWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
-            width: 950.sp,
+            width:ResponsiveWidget.isSmallScreen(context)? 325.w : 950.w,
             child: Text(
               title,
               style: TextStyle(
@@ -48,7 +49,7 @@ class ProcessHeaderWidget extends StatelessWidget {
           ),
           verticalSpace(10),
           SizedBox(
-            width: 950.sp,
+            width: ResponsiveWidget.isSmallScreen(context)? 325.w : 950.w,
             child: Text(
               description,
               style: TextStyle(
@@ -62,11 +63,11 @@ class ProcessHeaderWidget extends StatelessWidget {
           ),
           verticalSpace(40),
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.w),
             decoration: ShapeDecoration(
               color: AppColor.grayColor15,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6),
+                borderRadius: BorderRadius.circular(6.r),
               ),
             ),
             child: Text(

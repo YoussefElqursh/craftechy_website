@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/common_btn_widget.dart';
@@ -14,8 +15,9 @@ class GetInTouchPart extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width - 160.w,
-          height: 485.h,
+          width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
+          height:  ResponsiveWidget.isLargeScreen(context)? 600.h : ResponsiveWidget.isMediumScreen(context)? 485.h : 900.h,
+          padding: ResponsiveWidget.isLargeScreen(context)? EdgeInsets.symmetric(horizontal: 350.w, vertical: 120.h) : ResponsiveWidget.isMediumScreen(context)? EdgeInsets.symmetric(horizontal: 250.w, vertical: 85.h) : EdgeInsets.symmetric(horizontal: 16.w, vertical: 50.h),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/get_in_touch.png'),
@@ -37,9 +39,9 @@ class GetInTouchPart extends StatelessWidget {
                 width: 60.w,
                 height: 60.h,
               ),
-              verticalSpace(40),
+              ResponsiveWidget.isLargeScreen(context)? verticalSpace(50) :  ResponsiveWidget.isMediumScreen(context)? verticalSpace(40) : verticalSpace(28),
               SizedBox(
-                width: 780,
+                width:  ResponsiveWidget.isSmallScreen(context)? 326.w : 780.w,
                 child: Text(
                   'Thank you for your Interest in SquareUp.',
                   textAlign: TextAlign.center,
@@ -52,7 +54,7 @@ class GetInTouchPart extends StatelessWidget {
               ),
               verticalSpace(10),
               SizedBox(
-                width: 780,
+                width: ResponsiveWidget.isSmallScreen(context)? 326.w : 780.w,
                 child: Text(
                   'We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.',
                   textAlign: TextAlign.center,
@@ -65,7 +67,7 @@ class GetInTouchPart extends StatelessWidget {
                   ),
                 ),
               ),
-              verticalSpace(40),
+              ResponsiveWidget.isLargeScreen(context)? verticalSpace(50) :  ResponsiveWidget.isMediumScreen(context)? verticalSpace(40) : verticalSpace(28),
               CommonBtnWidget(
                 title: 'Start Project',
                 borderSide: BorderSide.none,

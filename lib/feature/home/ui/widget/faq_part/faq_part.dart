@@ -1,3 +1,4 @@
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/feature/home/data/q_a.dart';
 import 'package:craftechy_website/feature/home/ui/widget/faq_part/faq_item_widget.dart';
@@ -14,7 +15,7 @@ class FAQPart extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width - 160.w,
+          width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
           height: 280.h,
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -29,7 +30,7 @@ class FAQPart extends StatelessWidget {
           ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width - 160.w,
+          width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,
@@ -39,7 +40,7 @@ class FAQPart extends StatelessWidget {
           ),
           child: LayoutBuilder(
             builder: (context, constraints) {
-              double itemWidth = (constraints.maxWidth) / 2;
+              double itemWidth = ResponsiveWidget.isSmallScreen (context) ? (constraints.maxWidth) : (constraints.maxWidth) / 2;
               return Wrap(
                 children: List.generate(listOFFAQ.length, (index) {
                   return SizedBox(

@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/feature/about/ui/widget/cta_section_widget.dart';
 import 'package:craftechy_website/feature/careers/data/data.dart';
@@ -26,7 +27,7 @@ class CareersScreen extends StatelessWidget {
             subtitle: 'Why Work at SquareUp?',
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 160.w,
+            width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               border: Border.all(
                 width: 1,
@@ -36,16 +37,16 @@ class CareersScreen extends StatelessWidget {
             ),
             child: LayoutBuilder(
               builder: (context, constraints) {
-                double itemWidth = (constraints.maxWidth) / 2;
+                double itemWidth = ResponsiveWidget. isSmallScreen(context)? (constraints.maxWidth) : (constraints.maxWidth) / 2;
                 return Wrap(
                   children: List.generate(listOFCareers.length, (index) {
                     return SizedBox(
                         width: itemWidth,
                         child: Container(
-                          height: 400.h,
+                          height: ResponsiveWidget.isSmallScreen(context)? 420.h : ResponsiveWidget.isMediumScreen(context)? 450.h : 470.h,
                           padding: EdgeInsets.symmetric(
-                            horizontal: 40.w,
-                            vertical: 80.h,
+                            horizontal: ResponsiveWidget.isLargeScreen(context) ? 50.w : ResponsiveWidget.isMediumScreen(context) ? 40.w : 24.w ,
+                            vertical: ResponsiveWidget.isLargeScreen(context) ? 100.h : ResponsiveWidget.isMediumScreen(context) ? 80.h : 40.h,
                           ),
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -66,8 +67,11 @@ class CareersScreen extends StatelessWidget {
                                   fontWeight: FontWeightHelper.medium,
                                 ),
                               ),
-                              Divider(
-                                color: AppColor.grayColor15,
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: ResponsiveWidget.isLargeScreen(context) ? 50.h : ResponsiveWidget.isMediumScreen(context) ? 40.h : 20.h,),
+                                child: Divider(
+                                  color: AppColor.grayColor15,
+                                ),
                               ),
                               Text(
                                 listOFCareers[index]['description']!,
@@ -78,6 +82,8 @@ class CareersScreen extends StatelessWidget {
                                   height: 1.50,
                                   letterSpacing: -0.10,
                                 ),
+                                maxLines: 8,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ],
                           ),

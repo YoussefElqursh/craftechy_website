@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/icon_container_widget.dart';
@@ -18,6 +19,7 @@ class ServiceSpecisItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: ResponsiveWidget.isLargeScreen(context)? (MediaQuery.sizeOf(context).width - 342.w)/4 : ResponsiveWidget.isMediumScreen(context)? (MediaQuery.sizeOf(context).width - 160.w)/4 : double.infinity,
       padding: EdgeInsets.symmetric(vertical: 40.w, horizontal: 40.w),
       decoration: BoxDecoration(
         border: Border.all(

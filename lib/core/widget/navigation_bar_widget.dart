@@ -10,23 +10,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class NavigationBarWidget extends StatelessWidget {
-  const NavigationBarWidget({super.key});
+  final VoidCallback? onMenuTap;
+  final GlobalKey<ScaffoldState>? scaffoldKey;
+
+  const NavigationBarWidget({super.key, this.scaffoldKey, this.onMenuTap});
 
   @override
   Widget build(BuildContext context) {
     final String currentRoute = GoRouterState.of(context).uri.path;
+    final bool isSmall = ResponsiveWidget.isSmallScreen(context);
 
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: ResponsiveWidget.isLargeScreen(context)
-            ? 162
+            ? 162.w
             : ResponsiveWidget.isMediumScreen(context)
-            ? 80
-            : 16,
+            ? 80.w
+            : 16.w,
         vertical: ResponsiveWidget.isLargeScreen(context) ||
             ResponsiveWidget.isMediumScreen(context)
-            ? 20
-            : 10,
+            ? 20.h
+            : 10.h,
       ),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
@@ -49,39 +53,40 @@ class NavigationBarWidget extends StatelessWidget {
 
           const Spacer(),
 
-          // Navigation buttons
-          Row(
-            spacing: 24.w,
-            children: [
-              _buildNavButton(context, 'Home', Routes.homeRoute, currentRoute),
-              _buildNavButton(context, 'Services', Routes.servicesRoute, currentRoute),
-              _buildNavButton(context, 'Work', Routes.workRoute, currentRoute),
-              _buildNavButton(context, 'Process', Routes.processRoute, currentRoute),
-              _buildNavButton(context, 'About', Routes.aboutRoute, currentRoute),
-              _buildNavButton(context, 'Careers', Routes.careersRoute, currentRoute),
-            ],
-          ),
+          // 🧭 Navigation for medium and large screens
+          if (!isSmall)
+            Row(
+              spacing: 24.w,
+              children: [
+                buildNavButton(context, 'Home', Routes.homeRoute, currentRoute),
+                buildNavButton(context, 'Services', Routes.servicesRoute, currentRoute),
+                buildNavButton(context, 'Work', Routes.workRoute, currentRoute),
+                buildNavButton(context, 'Process', Routes.processRoute, currentRoute),
+                buildNavButton(context, 'About', Routes.aboutRoute, currentRoute),
+                buildNavButton(context, 'Careers', Routes.careersRoute, currentRoute),
+              ],
+            ),
 
-          const Spacer(),
+          if (!isSmall) const Spacer(),
 
-          // Contact Button
-          CommonBtnWidget(
-            title: 'Contact Us',
-            onPressed: () => context.go(Routes.contactRoute),
-            borderSide: BorderSide.none,
-          ),
+          // 📞 Contact Button (large/medium only)
+          if (!isSmall)
+            CommonBtnWidget(
+              title: 'Contact Us',
+              onPressed: () => context.go(Routes.contactRoute),
+              borderSide: BorderSide.none,
+            ),
+
+          // 🍔 Menu icon for small screens
+          if (isSmall)
+            IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                onMenuTap!();
+              },
+            ),
         ],
       ),
-    );
-  }
-
-  Widget _buildNavButton(BuildContext context, String title, String route, String currentRoute) {
-    return NavigationBarBtnWidget(
-      title: title,
-      isSelected: currentRoute == route,
-      onPressed: () {
-        if (currentRoute != route) context.go(route);
-      },
     );
   }
 }
