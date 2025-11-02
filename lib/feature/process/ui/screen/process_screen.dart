@@ -21,7 +21,7 @@ class ProcessScreen extends StatelessWidget {
         children: [
           ProcessBannerWidget(),
           ProcessHeaderWidget(
-            title: 'At SquareUp',
+            title: 'At Craftechy',
             description:
             'We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.',
             subtitle: 'Here\'s an overview of our typical process:',

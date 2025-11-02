@@ -1,3 +1,4 @@
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart'as svg;
@@ -10,9 +11,9 @@ class IconContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70.w,
-      height: 70.h,
-      padding: const EdgeInsets.all(20),
+      width: ResponsiveWidget.isLargeScreen(context)? 88.w : ResponsiveWidget.isMediumScreen(context)? 70.w : 58.w,
+      height: ResponsiveWidget.isLargeScreen(context)? 88.h : ResponsiveWidget.isMediumScreen(context)? 70.h : 58.h,
+      padding: ResponsiveWidget.isLargeScreen(context)? EdgeInsets.all(24.w) : ResponsiveWidget.isMediumScreen(context)? EdgeInsets.all(20.w) : EdgeInsets.all(16.w),
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
         image: DecorationImage(image: svg.Svg(image)),

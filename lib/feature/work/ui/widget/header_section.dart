@@ -31,7 +31,7 @@ class HeaderSection extends StatelessWidget {
           SizedBox(
             width: ResponsiveWidget.isSmallScreen(context)? 325.w : 950.w,
             child: Text(
-              'At SquareUp',
+              'At Craftechy',
               style: TextStyle(
                 color: AppColor.whiteColor,
                 fontSize: 38.sp,

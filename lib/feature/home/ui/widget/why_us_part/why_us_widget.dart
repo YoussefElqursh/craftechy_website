@@ -1,9 +1,9 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
 import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
+import 'package:craftechy_website/core/widget/icon_container_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg;
 
 class WhyUsWidget extends StatelessWidget {
   final String title;
@@ -42,30 +42,7 @@ class WhyUsWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   spacing: 14.h,
                   children: [
-                    Container(
-                      width: 70.w,
-                      height: 70.h,
-                      padding: EdgeInsets.all(20.w),
-                      clipBehavior: Clip.antiAlias,
-                      decoration: ShapeDecoration(
-                        image: DecorationImage(image: svg.Svg(icon)),
-                        gradient: LinearGradient(
-                          begin: Alignment(0.00, 1.00),
-                          end: Alignment(0.00, 0.00),
-                          colors: [
-                            const Color(0xFF242424),
-                            const Color(0x00242424),
-                          ],
-                        ),
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            width: 1,
-                            color: const Color(0xFF2E2E2E),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                    ),
+                    IconContainerWidget(image: icon),
                     SizedBox(
                       width: 170.w,
                       child: Text(
@@ -119,30 +96,7 @@ class WhyUsWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 spacing: 14,
                 children: [
-                  Container(
-                    width: 70.w,
-                    height: 70.h,
-                    padding: EdgeInsets.all(20.w),
-                    clipBehavior: Clip.antiAlias,
-                    decoration: ShapeDecoration(
-                      image: DecorationImage(image: svg.Svg(icon)),
-                      gradient: LinearGradient(
-                        begin: Alignment(0.00, 1.00),
-                        end: Alignment(0.00, 0.00),
-                        colors: [
-                          const Color(0xFF242424),
-                          const Color(0x00242424),
-                        ],
-                      ),
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          width: 1,
-                          color: const Color(0xFF2E2E2E),
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                  ),
+                  IconContainerWidget(image: icon),
                   SizedBox(
                     width: 170.w,
                     child: Text(

@@ -1,4 +1,5 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -48,8 +49,8 @@ class FAQItemState extends State<FAQItem> {
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           leading: Container(
-            width: 70,
-            height: 70,
+            width: ResponsiveWidget.isLargeScreen(context)? 88.w : ResponsiveWidget.isMediumScreen(context)? 70.w : 58.w,
+            height: ResponsiveWidget.isLargeScreen(context)? 88.h : ResponsiveWidget.isMediumScreen(context)? 70.h : 58.h,
             alignment: Alignment.center,
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(

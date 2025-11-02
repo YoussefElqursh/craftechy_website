@@ -43,7 +43,7 @@ class GetInTouchPart extends StatelessWidget {
               SizedBox(
                 width:  ResponsiveWidget.isSmallScreen(context)? 326.w : 780.w,
                 child: Text(
-                  'Thank you for your Interest in SquareUp.',
+                  'Thank you for your Interest in Craftechy.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: AppColor.whiteColor,

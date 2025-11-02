@@ -23,7 +23,7 @@ class ServicesScreen extends StatelessWidget {
           ServiceItem(
             title: 'Design',
             description:
-            'At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it\'s about creating seamless and intuitive user experiences. ',
+            'At Craftechy, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it\'s about creating seamless and intuitive user experiences. ',
             subtitle: 'Our design services include:',
             listOfServices1: uxListOfServices,
             listOfServices2: uiListOfServices,

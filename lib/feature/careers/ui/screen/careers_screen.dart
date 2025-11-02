@@ -21,10 +21,10 @@ class CareersScreen extends StatelessWidget {
         children: [
           CareerBannerWidget(),
           ProcessHeaderWidget(
-            title: 'Welcome to SquareUp, where talent meets opportunity!',
+            title: 'Welcome to Craftechy, where talent meets opportunity!',
             description:
-            'At SquareUp, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you\'re ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us.',
-            subtitle: 'Why Work at SquareUp?',
+            'At Craftechy, we believe that the success of our agency lies in the talent, passion, and dedication of our team members. We are a digital product agency that thrives on innovation, creativity, and collaboration. If you\'re ready to make a difference and contribute to cutting-edge projects, we invite you to explore career opportunities with us.',
+            subtitle: 'Why Work at Craftechy?',
           ),
           Container(
             width: ResponsiveWidget.isLargeScreen(context)? MediaQuery.of(context).size.width - 342.w : ResponsiveWidget.isMediumScreen(context)? MediaQuery.of(context).size.width - 160.w : MediaQuery.of(context).size.width,

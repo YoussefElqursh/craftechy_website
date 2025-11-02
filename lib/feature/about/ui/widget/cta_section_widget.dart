@@ -47,7 +47,7 @@ class CTASection extends StatelessWidget {
                 ),
                 verticalSpace(24),
                 Text(
-                  'Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....',
+                  'Today, Craftechy Continues to Thrive as a Leading Digital Product Agency.....',
                   style: TextStyle(
                     color: AppColor.grayColor60,
                     fontSize: 24.sp,
@@ -94,7 +94,7 @@ class CTASection extends StatelessWidget {
                             SizedBox(
                               width: 270.w,
                               child: Text(
-                                'Welcome to SquareUp',
+                                'Welcome to Craftechy',
                                 style: TextStyle(
                                   color: AppColor.grayColor60,
                                   fontSize: 18.sp,
@@ -171,7 +171,7 @@ class CTASection extends StatelessWidget {
                         spacing: 15,
                         children: [
                           Text(
-                            'Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....',
+                            'Today, Craftechy Continues to Thrive as a Leading Digital Product Agency.....',
                             style: TextStyle(
                               color: AppColor.grayColor60,
                               fontSize: 24.sp,
@@ -225,7 +225,7 @@ class CTASection extends StatelessWidget {
                           spacing: 10,
                           children: [
                             Text(
-                              'Welcome to SquareUp',
+                              'Welcome to Craftechy',
                               style: TextStyle(
                                 color: AppColor.grayColor60,
                                 fontSize: 18.sp,

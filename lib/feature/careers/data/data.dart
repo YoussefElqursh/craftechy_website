@@ -2,17 +2,17 @@ final List<Map<String, String>> listOFCareers = [
   {
     "title": "Innovative and Impactful Projects",
     "description":
-        "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference.",
+        "At Craftechy, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference.",
   },
   {
     "title": "Supportive Environment",
     "description":
-        "At SquareUp, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference.",
+        "At Craftechy, you'll have the opportunity to work on exciting and impactful projects that shape the digital landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of a team that creates products that make a difference.",
   },
   {
     "title": "Continuous Learning and Growth",
     "description":
-        "We believe in investing in our team's growth and development. We provide opportunities for continuous learning, whether it's through workshops, training programs, or attending industry conferences. At SquareUp, you'll have the chance to expand your skill set and stay up-to-date with the latest trends and technologies.",
+        "We believe in investing in our team's growth and development. We provide opportunities for continuous learning, whether it's through workshops, training programs, or attending industry conferences. At Craftechy, you'll have the chance to expand your skill set and stay up-to-date with the latest trends and technologies.",
   },
   {
     "title": "Challenging and Rewarding Work",

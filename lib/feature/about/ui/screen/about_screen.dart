@@ -48,7 +48,7 @@ class AboutScreen extends StatelessWidget {
                           SizedBox(
                             width: 290.w,
                             child: Text(
-                              'About SquareUp',
+                              'About Craftechy',
                               style: TextStyle(
                                 color: AppColor.whiteColor,
                                 fontSize: 38.sp,
@@ -60,7 +60,7 @@ class AboutScreen extends StatelessWidget {
                           SizedBox(
                             width: 290.w,
                             child: Text(
-                              'SquareUp is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At SquareUp, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.',
+                              'Craftechy is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At Craftechy, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.',
                               style: TextStyle(
                                 color: AppColor.grayColor90,
                                 fontSize: 16.0.sp,
@@ -108,7 +108,7 @@ class AboutScreen extends StatelessWidget {
                           SizedBox(
                             width: 290.w,
                             child: Text(
-                              'About SquareUp',
+                              'About Craftechy',
                               style: TextStyle(
                                 color: AppColor.whiteColor,
                                 fontSize: 38.sp,
@@ -120,7 +120,7 @@ class AboutScreen extends StatelessWidget {
                           SizedBox(
                             width: 290.w,
                             child: Text(
-                              'SquareUp is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At SquareUp, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.',
+                              'Craftechy is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At Craftechy, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.',
                               style: TextStyle(
                                 color: AppColor.grayColor90,
                                 fontSize: 16.0.sp,
