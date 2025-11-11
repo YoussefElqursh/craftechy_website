@@ -122,7 +122,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/facebook.svg',
+                            'assets/icon/facebook.svg',
                           ),
                         ),
                         gradient: LinearGradient(
@@ -150,7 +150,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/twitter.svg',
+                            'assets/icon/twitter.svg',
                           ),
                         ),
                         gradient: LinearGradient(
@@ -178,7 +178,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/linkedin.svg',
+                            'assets/icon/linkedin.svg',
                           ),
                         ),
                         gradient: LinearGradient(
@@ -292,7 +292,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/facebook.svg',
+                            'assets/icon/facebook.svg',
                           ),
                         ),
                         gradient: LinearGradient(
@@ -320,7 +320,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/twitter.svg',
+                            'assets/icon/twitter.svg',
                           ),
                         ),
                         gradient: LinearGradient(
@@ -348,7 +348,7 @@ class SocialMediaContact extends StatelessWidget {
                       decoration: ShapeDecoration(
                         image: DecorationImage(
                           image: svg.Svg(
-                            'assets/icons/linkedin.svg',
+                            'assets/icon/linkedin.svg',
                           ),
                         ),
                         gradient: LinearGradient(

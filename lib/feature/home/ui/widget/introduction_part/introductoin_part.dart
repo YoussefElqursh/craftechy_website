@@ -17,12 +17,12 @@ class IntroductionPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> trustedCompanies = [
-      'assets/icons/zapier.svg',
-      'assets/icons/spotify.svg',
-      'assets/icons/zoom.svg',
-      'assets/icons/slack.svg',
-      'assets/icons/amazon.svg',
-      'assets/icons/adobe.svg',
+      'assets/icon/zapier.svg',
+      'assets/icon/spotify.svg',
+      'assets/icon/zoom.svg',
+      'assets/icon/slack.svg',
+      'assets/icon/amazon.svg',
+      'assets/icon/adobe.svg',
     ];
     return Column(
       children: [
@@ -45,7 +45,7 @@ class IntroductionPart extends StatelessWidget {
                 width: double.infinity,
                 padding: EdgeInsets.only(top: 200.h, bottom: 0.h),
                 child: SvgPicture.asset(
-                  'assets/icons/Abstract Design.svg',
+                  'assets/icon/Abstract Design.svg',
                   fit: BoxFit.fill,
                 ),
               ),
@@ -256,12 +256,12 @@ class IntroductionPart extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    TrustedCompanyWidget(image: 'assets/icons/zapier.svg'),
-                    TrustedCompanyWidget(image: 'assets/icons/spotify.svg'),
-                    TrustedCompanyWidget(image: 'assets/icons/zoom.svg'),
-                    TrustedCompanyWidget(image: 'assets/icons/slack.svg'),
-                    TrustedCompanyWidget(image: 'assets/icons/amazon.svg'),
-                    TrustedCompanyWidget(image: 'assets/icons/adobe.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/zapier.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/spotify.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/zoom.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/slack.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/amazon.svg'),
+                    TrustedCompanyWidget(image: 'assets/icon/adobe.svg'),
                   ],
                 ),
               ),

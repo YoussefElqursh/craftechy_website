@@ -39,7 +39,7 @@ class CTASection extends StatelessWidget {
                     ),
                   ),
                   child: Image(
-                    image: svg.Svg('assets/icons/Logo.svg'),
+                    image: svg.Svg('assets/icon/Logo.svg'),
                     width: 100.w,
                     height: 100.h,
                     fit: BoxFit.contain,
@@ -157,7 +157,7 @@ class CTASection extends StatelessWidget {
                         ),
                       ),
                       child: Image(
-                        image: svg.Svg('assets/icons/Logo.svg'),
+                        image: svg.Svg('assets/icon/Logo.svg'),
                         width: 100.w,
                         height: 100.h,
                         fit: BoxFit.contain,

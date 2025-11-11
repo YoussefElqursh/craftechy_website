@@ -79,7 +79,7 @@ class AboutHeader extends StatelessWidget {
             ),
             child: Center(
               child: Image(
-                image: svg.Svg('assets/icons/Logo.svg'),
+                image: svg.Svg('assets/icon/Logo.svg'),
                 width: 100.w,
                 height: 100.h,
               ),
@@ -138,7 +138,7 @@ class AboutHeader extends StatelessWidget {
             ),
             child: Center(
               child: Image(
-                image: svg.Svg('assets/icons/Logo.svg'),
+                image: svg.Svg('assets/icon/Logo.svg'),
                 width: 100.w,
                 height: 100.h,
               ),

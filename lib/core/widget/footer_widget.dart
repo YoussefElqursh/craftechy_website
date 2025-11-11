@@ -50,12 +50,12 @@ class _FooterWidgetState extends State<FooterWidget> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SvgPicture.asset(
-              'assets/icons/Logo.svg',
+              'assets/icon/Logo.svg',
               height: 50.h,
               width: 50.w,
             ),
             horizontalSpace(7),
-            SvgPicture.asset('assets/icons/SquareUp.svg'),
+            SvgPicture.asset('assets/icon/SquareUp.svg'),
           ],
         ),
           verticalSpace(30),
@@ -182,7 +182,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                       clipBehavior: Clip.antiAlias,
                       decoration: ShapeDecoration(
                         image: DecorationImage(
-                          image: svg.Svg('assets/icons/facebook.svg'),
+                          image: svg.Svg('assets/icon/facebook.svg'),
                         ),
                         gradient: LinearGradient(
                           begin: Alignment(0.00, 1.00),
@@ -208,7 +208,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                       clipBehavior: Clip.antiAlias,
                       decoration: ShapeDecoration(
                         image: DecorationImage(
-                          image: svg.Svg('assets/icons/twitter.svg'),
+                          image: svg.Svg('assets/icon/twitter.svg'),
                         ),
                         gradient: LinearGradient(
                           begin: Alignment(0.00, 1.00),
@@ -234,7 +234,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                       clipBehavior: Clip.antiAlias,
                       decoration: ShapeDecoration(
                         image: DecorationImage(
-                          image: svg.Svg('assets/icons/linkedin.svg'),
+                          image: svg.Svg('assets/icon/linkedin.svg'),
                         ),
                         gradient: LinearGradient(
                           begin: Alignment(0.00, 1.00),
@@ -265,7 +265,7 @@ class _FooterWidgetState extends State<FooterWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/icons/email.svg'),
+                SvgPicture.asset('assets/icon/email.svg'),
                 horizontalSpace(10),
                 SelectableText(
                   'info@craftechy.com',
@@ -289,7 +289,7 @@ class _FooterWidgetState extends State<FooterWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/icons/phone.svg'),
+                SvgPicture.asset('assets/icon/phone.svg'),
                 horizontalSpace(10),
                 SelectableText(
                   '+1 234 567 890',
@@ -313,7 +313,7 @@ class _FooterWidgetState extends State<FooterWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/icons/location.svg'),
+                SvgPicture.asset('assets/icon/location.svg'),
                 horizontalSpace(10),
                 SelectableText(
                   '123 Main St, Anytown, USA',
@@ -363,12 +363,12 @@ class _FooterWidgetState extends State<FooterWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/Logo.svg',
+                    'assets/icon/Logo.svg',
                     height: 40.h,
                     width: 40.w,
                   ),
                   horizontalSpace(7),
-                  SvgPicture.asset('assets/icons/SquareUp.svg'),
+                  SvgPicture.asset('assets/icon/SquareUp.svg'),
                 ],
               ),
               Wrap(
@@ -488,7 +488,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           clipBehavior: Clip.antiAlias,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: svg.Svg('assets/icons/facebook.svg'),
+                              image: svg.Svg('assets/icon/facebook.svg'),
                             ),
                             gradient: LinearGradient(
                               begin: Alignment(0.00, 1.00),
@@ -514,7 +514,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           clipBehavior: Clip.antiAlias,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: svg.Svg('assets/icons/twitter.svg'),
+                              image: svg.Svg('assets/icon/twitter.svg'),
                             ),
                             gradient: LinearGradient(
                               begin: Alignment(0.00, 1.00),
@@ -540,7 +540,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           clipBehavior: Clip.antiAlias,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: svg.Svg('assets/icons/linkedin.svg'),
+                              image: svg.Svg('assets/icon/linkedin.svg'),
                             ),
                             gradient: LinearGradient(
                               begin: Alignment(0.00, 1.00),
@@ -575,7 +575,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/icons/email.svg'),
+                  SvgPicture.asset('assets/icon/email.svg'),
                   horizontalSpace(10),
                   SelectableText(
                     'info@craftechy.com',
@@ -593,7 +593,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/icons/phone.svg'),
+                  SvgPicture.asset('assets/icon/phone.svg'),
                   horizontalSpace(10),
                   SelectableText(
                     '+1 234 567 890',
@@ -611,7 +611,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/icons/location.svg'),
+                  SvgPicture.asset('assets/icon/location.svg'),
                   horizontalSpace(10),
                   SelectableText(
                     '123 Main St, Anytown, USA',

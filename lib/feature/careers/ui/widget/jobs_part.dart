@@ -1,0 +1,72 @@
+import 'package:craftechy_website/core/constant/font_wight_helper.dart';
+import 'package:craftechy_website/core/constant/responsive.dart';
+import 'package:craftechy_website/core/theme/color.dart';
+import 'package:craftechy_website/feature/careers/data/repository/job_repository.dart';
+import 'package:craftechy_website/feature/careers/logic/job_cubit.dart';
+import 'package:craftechy_website/feature/careers/ui/widget/job_item.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class JobsPart extends StatelessWidget {
+  const JobsPart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => JobCubit(JobRepository())..fetchJobs(),
+      child: BlocBuilder<JobCubit, JobState>(
+        builder: (context, state) {
+          if (state is JobLoading) {
+            return const Center(
+              child: CircularProgressIndicator(color: AppColor.greenColor50),
+            );
+          } else if (state is JobLoaded) {
+            final jobs = state.jobs;
+            return Container(
+              width: ResponsiveWidget.isLargeScreen(context)
+                  ? MediaQuery.of(context).size.width - 342.w
+                  : ResponsiveWidget.isMediumScreen(context)
+                  ? MediaQuery.of(context).size.width - 160.w
+                  : MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 1,
+                  strokeAlign: BorderSide.strokeAlignOutside,
+                  color: AppColor.grayColor15,
+                ),
+              ),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  double itemWidth = ResponsiveWidget.isSmallScreen(context)
+                      ? (constraints.maxWidth)
+                      : (constraints.maxWidth) / 2;
+                  return Wrap(
+                    children: List.generate(jobs.length, (index) {
+                      return SizedBox(
+                        width: itemWidth,
+                        child: JobItem(job: jobs[index]),
+                      );
+                    }),
+                  );
+                },
+              ),
+            );
+          } else if (state is JobError) {
+            return Center(
+              child: Text(
+                state.message,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeightHelper.semiBold,
+                ),
+              ),
+            );
+          }
+          return const SizedBox();
+        },
+      ),
+    );
+  }
+}

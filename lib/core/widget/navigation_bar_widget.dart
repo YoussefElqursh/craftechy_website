@@ -45,9 +45,9 @@ class NavigationBarWidget extends StatelessWidget {
           // Logo
           Row(
             children: [
-              SvgPicture.asset('assets/icons/Logo.svg', height: 40.h, width: 40.w),
+              SvgPicture.asset('assets/icon/Logo.svg', height: 40.h, width: 40.w),
               horizontalSpace(7),
-              SvgPicture.asset('assets/icons/SquareUp.svg'),
+              SvgPicture.asset('assets/icon/SquareUp.svg'),
             ],
           ),
 

@@ -50,7 +50,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/email.svg'),
+                SvgPicture.asset('assets/icon/email.svg'),
                 SelectableText(
                   'Craftechy.com',
                   style: TextStyle(
@@ -80,7 +80,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/phone.svg'),
+                SvgPicture.asset('assets/icon/phone.svg'),
                 SelectableText(
                   '+91 91813 23 2309',
                   style: TextStyle(
@@ -110,7 +110,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/location.svg'),
+                SvgPicture.asset('assets/icon/location.svg'),
                 SelectableText(
                   'Get Location',
                   style: TextStyle(
@@ -148,7 +148,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/email.svg'),
+                SvgPicture.asset('assets/icon/email.svg'),
                 SelectableText(
                   'Craftechy.com',
                   style: TextStyle(
@@ -178,7 +178,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/phone.svg'),
+                SvgPicture.asset('assets/icon/phone.svg'),
                 SelectableText(
                   '+91 91813 23 2309',
                   style: TextStyle(
@@ -208,7 +208,7 @@ class ContactMethods extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 14,
               children: [
-                SvgPicture.asset('assets/icons/location.svg'),
+                SvgPicture.asset('assets/icon/location.svg'),
                 SelectableText(
                   'Get Location',
                   style: TextStyle(

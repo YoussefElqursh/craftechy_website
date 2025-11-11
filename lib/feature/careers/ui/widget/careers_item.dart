@@ -5,7 +5,6 @@ import 'package:craftechy_website/feature/careers/data/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class CareersItem extends StatelessWidget {
   final int index;
   const CareersItem({
@@ -15,7 +14,7 @@ class CareersItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ResponsiveWidget.isSmallScreen(context)? 420.h : ResponsiveWidget.isMediumScreen(context)? 450.h : 470.h,
+      height: ResponsiveWidget.isSmallScreen(context)? 420.h : ResponsiveWidget.isMediumScreen(context)? 460.h : 470.h,
       padding: EdgeInsets.symmetric(
         horizontal: ResponsiveWidget.isLargeScreen(context) ? 50.w : ResponsiveWidget.isMediumScreen(context) ? 40.w : 24.w ,
         vertical: ResponsiveWidget.isLargeScreen(context) ? 100.h : ResponsiveWidget.isMediumScreen(context) ? 80.h : 40.h,

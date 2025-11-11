@@ -34,7 +34,7 @@ class GetInTouchWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image(
-            image: svg.Svg('assets/icons/Logo.svg'),
+            image: svg.Svg('assets/icon/Logo.svg'),
             width: 60.w,
             height: 60.h,
           ),
