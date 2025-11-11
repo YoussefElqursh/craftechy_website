@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
 import 'package:craftechy_website/core/theme/color.dart';
-import 'package:craftechy_website/feature/work/data/data.dart';
+import 'package:craftechy_website/feature/work/data/model/project_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WorkItem extends StatelessWidget {
-  final int index;
+  final ProjectModel project;
 
-  const WorkItem({super.key, required this.index});
+  const WorkItem({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class WorkItem extends StatelessWidget {
               ),
             ),
             child: Text(
-              listOFWork[index]['header']!,
+              project.projectHeader,
               style: TextStyle(
                 color: AppColor.grayColor60,
                 fontSize: 26.sp,
@@ -59,7 +59,18 @@ class WorkItem extends StatelessWidget {
                     ),
                   ),
                   child: CachedNetworkImage(
-                    imageUrl: listOFWork[index]['image']!,
+                    imageBuilder: (context, imageProvider) {
+                      return Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.r),
+                          image: DecorationImage(
+                            image: imageProvider,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      );
+                    },
+                    imageUrl: project.projectImage,
                     fit: BoxFit.cover,
                     placeholder: (context, url) => const Center(
                       child: CircularProgressIndicator(),
@@ -79,7 +90,7 @@ class WorkItem extends StatelessWidget {
                         SizedBox(
                           width: 198.75,
                           child: Text(
-                            listOFWork[index]['title']!,
+                            project.projectTitle,
                             style: TextStyle(
                               color: const Color(0xFFE6E6E6),
                               fontSize: 24.sp,
@@ -98,7 +109,7 @@ class WorkItem extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            listOFWork[index]['link']!,
+                            project.projectLink,
                             style: TextStyle(
                               color: AppColor.grayColor60,
                               fontSize: 18.sp,
@@ -126,7 +137,7 @@ class WorkItem extends StatelessWidget {
                 ),
                 SizedBox(
                   child: Text(
-                    listOFWork[index]['description']!,
+                    project.projectDescription,
                     style: TextStyle(
                       color: AppColor.grayColor60,
                       fontSize: 18.sp,
