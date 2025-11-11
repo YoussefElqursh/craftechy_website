@@ -16,9 +16,6 @@ class ProjectSupabaseService {
   // READ ALL
   Future<List<ProjectModel>> getAllProjects() async {
     final response = await client.from(_tableName).select();
-    if (kDebugMode) {
-      print('Supabase response: $response');
-    } // <--- Add this
     return (response as List).map((e) => ProjectModel.fromMap(e)).toList();
   }
 

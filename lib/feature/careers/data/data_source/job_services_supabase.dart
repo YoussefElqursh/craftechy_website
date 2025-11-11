@@ -18,9 +18,6 @@ class JobSupabaseService {
   // READ ALL
   Future<List<JobModel>> getAllJobs() async {
     final response = await client.from(_tableName).select();
-    if (kDebugMode) {
-      print('Supabase response: $response');
-    } // <--- Add this
     return (response as List).map((e) => JobModel.fromMap(e)).toList();
   }
 
