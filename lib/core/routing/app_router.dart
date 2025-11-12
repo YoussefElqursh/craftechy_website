@@ -1,6 +1,7 @@
 import 'package:craftechy_website/core/routing/routes.dart';
 import 'package:craftechy_website/feature/about/ui/screen/about_screen.dart';
 import 'package:craftechy_website/feature/careers/ui/screen/careers_screen.dart';
+import 'package:craftechy_website/feature/careers/ui/screen/job_screen.dart';
 import 'package:craftechy_website/feature/contact/ui/screen/contact_screen.dart';
 import 'package:craftechy_website/feature/home/ui/screen/home_screen.dart';
 import 'package:craftechy_website/feature/process/ui/screen/process_screen.dart';
@@ -43,6 +44,13 @@ class AppRouter{
         path: Routes.careersRoute,
         name: 'careers',
         builder: (context, state) => const CareersScreen(),
+        routes: [
+          GoRoute(
+            path: Routes.jobRoute,
+            name: 'job',
+            builder: (context, state) => const JobScreen(),
+          ),
+        ],
       ),
       GoRoute(
         path: Routes.contactRoute,

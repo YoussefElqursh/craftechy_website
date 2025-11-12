@@ -2,6 +2,7 @@ import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/icon_container_widget.dart';
 import 'package:craftechy_website/feature/careers/data/models/job_model.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class JobItem extends StatelessWidget {
   final JobModel job;
@@ -64,31 +65,36 @@ class JobItem extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-            decoration: ShapeDecoration(
-              color: const Color(0xFF262626),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              spacing: 10,
-              children: [
-                Text(
-                  'Apply Now',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontFamily: 'Barlow',
-                    fontWeight: FontWeight.w500,
-                    height: 1.71,
-                    letterSpacing: -0.08,
+          GestureDetector(
+            onTap: () {
+              context.go('/careers/job', extra: job);
+            },
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              decoration: ShapeDecoration(
+                color: const Color(0xFF262626),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                spacing: 10,
+                children: [
+                  Text(
+                    'Apply Now',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontFamily: 'Barlow',
+                      fontWeight: FontWeight.w500,
+                      height: 1.71,
+                      letterSpacing: -0.08,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

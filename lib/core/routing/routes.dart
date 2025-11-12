@@ -7,4 +7,5 @@ class Routes{
   static const String aboutRoute = '/about';
   static const String careersRoute = '/careers';
   static const String contactRoute = '/contact-us';
+  static const String jobRoute = '/job';
 }

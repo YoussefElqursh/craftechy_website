@@ -8,13 +8,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ProcessHeaderWidget extends StatelessWidget {
   final String title;
   final String description;
-  final String subtitle;
+  final String? subtitle;
 
   const ProcessHeaderWidget({
     super.key,
     required this.title,
     required this.description,
-    required this.subtitle,
+    this.subtitle,
   });
 
   @override
@@ -62,7 +62,7 @@ class ProcessHeaderWidget extends StatelessWidget {
             ),
           ),
           verticalSpace(40),
-          Container(
+           if(subtitle != null) Container(
             padding: EdgeInsets.all(10.w),
             decoration: ShapeDecoration(
               color: AppColor.grayColor15,
@@ -71,7 +71,7 @@ class ProcessHeaderWidget extends StatelessWidget {
               ),
             ),
             child: Text(
-              subtitle,
+              subtitle!,
               style: TextStyle(
                 color: AppColor.whiteColor,
                 fontSize: 18.sp,
