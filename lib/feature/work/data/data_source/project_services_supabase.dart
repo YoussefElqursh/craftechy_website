@@ -1,5 +1,4 @@
 import 'package:craftechy_website/feature/work/data/model/project_model.dart';
-import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ProjectSupabaseService {
