@@ -1,12 +1,18 @@
 import 'package:craftechy_website/core/constant/font_wight_helper.dart';
 import 'package:craftechy_website/core/constant/responsive.dart';
 import 'package:craftechy_website/core/constant/spacing_helper.dart';
+import 'package:craftechy_website/core/routing/routes.dart';
 import 'package:craftechy_website/core/theme/color.dart';
 import 'package:craftechy_website/core/widget/common_btn_widget.dart';
+import 'package:craftechy_website/feature/home/data/data_source/get_in_touch_supabase_service.dart';
+import 'package:craftechy_website/feature/home/data/repository/get_in_touch_repository.dart';
+import 'package:craftechy_website/feature/home/logic/get_in_touch_cubit.dart';
 import 'package:craftechy_website/feature/process/ui/widget/get_touch_form_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg;
+import 'package:go_router/go_router.dart';
 class GetInTouchPart extends StatelessWidget {
   const GetInTouchPart({super.key});
 
@@ -71,12 +77,17 @@ class GetInTouchPart extends StatelessWidget {
               CommonBtnWidget(
                 title: 'Start Project',
                 borderSide: BorderSide.none,
-                onPressed: () {},
+                onPressed: () {
+                  context.go(Routes.contactRoute);
+                },
               ),
             ],
           ),
         ),
-        GetTouchFormWidget(),
+        BlocProvider(
+          create: (_) => GetInTouchCubit(GetInTouchRepository(GetInTouchSupabaseService())),
+          child: GetTouchFormWidget(),
+        ),
       ],
     );
   }
