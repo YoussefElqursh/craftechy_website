@@ -37,10 +37,12 @@ dependencies:
   # UI
   cupertino_icons: ^1.0.8
   google_fonts: ^6.3.2
+  flutter_native_splash: ^2.4.7
   # Icons
   font_awesome_flutter:
   flutter_svg: ^2.2.2
   flutter_svg_provider: ^1.0.7
+  icons_launcher: ^3.0.3
   # Image
   cached_network_image: ^3.4.1
   file_picker: ^10.3.6
@@ -73,6 +75,49 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+icons_launcher:
+  image_path: 'assets/images/App_Icon.png'
+  platforms:
+    android:
+      enable: true
+      image_path: 'assets/images/App_Icon.png'
+      notification_image: "assets/images/App_Icon.png"
+      # adaptive_background_color: '#ffffff'
+      adaptive_background_image: 'assets/images/App_Icon.png'
+      adaptive_foreground_image: 'assets/images/App_Icon.png'
+      adaptive_round_image: 'assets/images/App_Icon.png'
+      adaptive_monochrome_image: 'assets/images/App_Icon.png'
+    ios:
+      enable: true
+      image_path: 'assets/images/App_Icon.png'
+      # For iOS 18+ (support dark and tinted)
+      dark_path: "assets/images/App_Icon.png"
+      tinted_path: "assets/images/App_Icon.png"
+    web:
+      enable: true
+      image_path: 'assets/images/App_Icon.png'
+      favicon_path: 'assets/images/App_Icon.png'
+    macos:
+      enable: false
+      image_path: 'assets/images/App_Icon.png'
+    windows:
+      enable: false
+      image_path: 'assets/images/App_Icon.png'
+    linux:
+      enable: false
+      image_path: 'assets/images/App_Icon.png'
+
+flutter_native_splash:
+  color: "#b9c730"
+  color_dark: "#000000"
+  image: assets/images/logo.png
+  image_dark: assets/images/dark_logo.png
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: center
+  fullscreen: true
 
 # The following section is specific to Flutter packages.
 flutter:

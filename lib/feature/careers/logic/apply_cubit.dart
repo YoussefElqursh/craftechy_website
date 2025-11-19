@@ -1,9 +1,6 @@
-
 import 'package:craftechy_website/feature/careers/data/repository/Apply_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:craftechy_website/feature/careers/data/models/apply_model.dart';
-
 part 'apply_state.dart';
 
 class ApplyCubit extends Cubit<ApplyState> {
