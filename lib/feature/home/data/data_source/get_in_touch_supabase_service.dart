@@ -20,6 +20,10 @@ class GetInTouchSupabaseService {
         'budget_to': maxBudget,
         'message': message,
       });
+
+      if (response.error != null) {
+        throw Exception('Failed to submit form: ${response.error!.message}');
+      }
     } catch (e) {
       throw Exception('Failed to submit form: $e');
     }
